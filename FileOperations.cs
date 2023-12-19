@@ -1,11 +1,4 @@
-﻿using System;
-using System.CodeDom.Compiler;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.JavaScript;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Task1B1
 {
@@ -40,7 +33,7 @@ namespace Task1B1
 
 		}
 
-		//Task Managemtn and async -- too slow in this case...
+		//Task Management and async -- too slow in this case...
 
 		//public static async Task MergingFilesIntoOneAsync(string directoryPath, string deleteSymbols)
 		//{
@@ -87,9 +80,10 @@ namespace Task1B1
 
 		private static string GenerateLettersRandomString(bool latin)
 		{
-			var rand = new Random();
 			const string latinChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 			const string russianChars = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
+			var rand = new Random();
 			const int length = 10;
 			var chars = latin ? latinChars : russianChars;
 
