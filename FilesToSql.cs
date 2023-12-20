@@ -12,6 +12,11 @@ namespace Task1B1
 {
 	public static class FilesToSql
 	{
+		/// <summary>
+		/// Method for import of strings to PostgreSQL
+		/// </summary>
+		/// <param name="path">Path to the file with strings</param>
+		/// <param name="logger">Logger to log action of importing</param>
 		public static void SqlImport(string path, ILogger logger)
 		{
 			var linesCount = File.ReadAllLines(path).Length;
